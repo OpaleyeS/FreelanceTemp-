@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local Spa Services</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="booking.js" defer></script>
+    </head>
+        <body>
+            <header>
+                <nav>
+                    <ul>
+
+                        <li><a href="#menu">menu</a></li><!--Bookmark buttons-->
+                        <li><a href="#booking">book service</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                    </ul>
+                </nav>
+                <div class="flex-container"> 
+                    <img height="400px" width="300px" src="assets/mortalNherb.jpg" alt="mortar and pestle with herbs">
+                    <div class="text-container">
+                        <h1>Welcome</h1>
+                            <p>Take a breath and select your choice of treatment or if you would like something unique send me a inquiry to create a singular experiance.</p>
+                            <a href="#menu" class="cta-button secondary">Menu</a>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section> 
+                    <div class="flex-container">
+                        <div class="text-container">
+                            <h2>Seasonal Services</h2>
+                                <p>With each new season a select set of products will be incorporated to help uplift and refresh treatments</p>
+                        </div>
+                        <img width="350px" src="assets/oil inhale.jpg" alt="oils being used for inhalation">
+                    </div>
+                </section>
+                <section id="gallery">
+                    <h2>Seasonal Inspirations</h2>
+                        <div class="grid-container"> 
+                        <img style="grid-area: img-1" src="assets/lemonbloom.jpg" alt="lemon flower">
+                        <img style="grid-area: img-2" src="assets/lavender.jpg" alt="lavender flower">
+                        <img style="grid-area: img-3" src="assets/wateermelon-flower.jpg" alt="watermelon plant">
+                        <img style="grid-area: img-4" src="assets/peachblossom.jpg" alt="peachblossom">
+                    </div>
+                </section>
+                <section>
+                    <h2>Treatments and Services</h2>
+                     <p>All services are custumizable and able to be modified.Even for expecting mothers and those under Dr.s' supervision. </p>
+                </section>
+                    <section id="menu">  
+                     <details><!--This is an interactive way for the user to see more information-->
+                            <summary>Aromatic Massage 50min | 80min</summary>
+                                <p>Choose from a selection of essential oils to enhance your service and reach a state of relaxation.Light muscle work with passive stretching will bring fluidity back into the body.</p>
+                                    <span> $125 | $175 </span>
+                            </details>
+                    </section>
+                    <section>      
+                    <details>
+                        <summary>Therapeutic Massage 50min | 80min</summary>
+                            <p>Remove lactic acid and increase circulation in stagnant muscles. With firm to deep pressure and trigger point work.</p>
+                                <span> $150 | $200 </span>
+                        </details>    
+                    </section>
+                    <section>
+                        <details>
+                        <summary>Stone and Crystal Massage 50min | 80min</summary>
+                            <p>Smooth iron rich stones are heated to help relax muscles. Cooled jade and marble stones are used to massage the face and decolletage.</p>
+                                <span> $175 | $200</span>
+                        </details>        
+                    </section>
+                    <section>
+                        <details>
+                        <summary>Golden Renewal 50min | 80min</summary>
+                          <p>A blend of salt and sugar combined with shea and cocoa butter, help reveal even smoth skin. The skin is then nourished with a rich peptide and amaranth mousse.</p>
+                                <span>$150 | $175</span>
+                        </details>        
+                    </section>
+                    <section>
+                        <details>
+                        <summary>Sole Ritual 40min | 60min</summary>
+                            <p>A warm herbal foot bath helps soften the skin. Followed by a mineral rich salt help exfoliate and bring circulation to the extremities. Using passive stretches and reflexology techniques, feet are refreshed and set for the next adventure. Hands are also treated in the hour long service. </p>
+                                <span>$75 | $100</span>
+                        </details>        
+                    </section>
+    <section id="booking">
+        <h2>Booking</h2>
+            <form id="booking-form">
+                <div class="option-group">
+                    <h3>Select your service</h3>
+                        <div class="option-list">
+                            <label class="option">
+                                <input type="radio" name="service" value="125" data-name="Aromatic Massage 50min">
+                                    <div class="option-text">
+                                        <span class="option-title">Aromatic Massage 50min</span>       
+                                    </div>
+                                    <span class="option-price">$125</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="service" value="175" data-name="Aromatic Massage 80min">
+                                    <div class="option-text">
+                                        <span class="option-title">Aromatic Massage 80min</span>       
+                                    </div>
+                                    <span class="option-price">$175</span>
+                            </label>
+
+                            <label class="option">
+                                <input type="radio" name="service" value="150" data-name="Theraputic Massage 50min">
+                                    <div class="option-text">
+                                        <span class="option-title">Theraputic Massage 50min</span>       
+                                    </div>
+                                    <span class="option-price">$150</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="service" value="200" data-name="Theraputic Massage 80min">
+                                    <div class="option-text">
+                                        <span class="option-title">Theraputic Massage 80min</span>       
+                                    </div>
+                                    <span class="option-price">$200</span>
+                            </label>
+                                 <label class="option">
+                                <input type="radio" name="service" value="175" data-name="Stone and Crystal Massage 80min">
+                                    <div class="option-text">
+                                        <span class="option-title">Stone and Crystal Massage 50min</span>       
+                                    </div>
+                                    <span class="option-price">$175</span>
+                            </label>
+                                 <label class="option">
+                                <input type="radio" name="service" value="150" data-name="Golden Renewal 50min">
+                                    <div class="option-text">
+                                        <span class="option-title">Golden Renewal 50min</span>       
+                                    </div>
+                                    <span class="option-price">$150</span>
+                            </label>
+                                 <label class="option">
+                                <input type="radio" name="service" value="175" data-name="Golden Renewal 80min">
+                                    <div class="option-text">
+                                        <span class="option-title">Golden Renewal 80min</span>       
+                                    </div>
+                                    <span class="option-price">$175</span>
+                            </label>
+                                 <label class="option">
+                                <input type="radio" name="service" value="75" data-name="Sole Ritual 40min">
+                                    <div class="option-text">
+                                        <span class="option-title">Sole Ritual 40min</span>       
+                                    </div>
+                                    <span class="option-price">$75</span>
+                            </label>
+                                 <label class="option">
+                                <input type="radio" name="service" value="100" data-name="Sole Ritual 60min">
+                                    <div class="option-text">
+                                        <span class="option-title">Sole Ritual 60min</span>       
+                                    </div>
+                                    <span class="option-price">$100</span>
+                            </label>
+                        </div>
+                </div>
+                <div class="option-group">
+                    <h3>Enhancements</h3>
+                        <div class="option-list">
+                            <label class="option">
+                                <input type="checkbox" name="addon" value="25" data-name="CBD Oil">
+                                <div class="option-text">
+                                    <span class="option-title">CBD oil</span>
+                                </div>
+                                <span class="option-price">+25</span>
+                            </label>
+                              <label class="option">
+                                <input type="checkbox" name="addon" value="25" data-name="Deep Tissue">
+                                <div class="option-text">
+                                    <span class="option-title">Deep Tissue</span>
+                                </div>
+                                <span class="option-price">+25</span>
+                            </label>
+                              <label class="option">
+                                <input type="checkbox" name="addon" value="25" data-name="Cupping">
+                                <div class="option-text">
+                                    <span class="option-title">Cupping</span>
+                                </div>
+                                <span class="option-price">+25</span>
+                            </label>
+                              <label class="option">
+                                <input type="checkbox" name="addon" value="25" data-name="Warm Stones">
+                                <div class="option-text">
+                                    <span class="option-title">Warm Stones</span>
+                                </div>
+                                <span class="option-price">+25</span>
+                            </label>
+                              <label class="option">
+                                <input type="checkbox" name="addon" value="30" data-name="Mini Facial">
+                                <div class="option-text">
+                                    <span class="option-title">Mini Facial</span>
+                                </div>
+                                <span class="option-price">+30</span>
+                            </label>
+                              <label class="option">
+                                <input type="checkbox" name="addon" value="30" data-name="Foot Treatment">
+                                <div class="option-text">
+                                    <span class="option-title">Foot Treatment</span>
+                                </div>
+                                <span class="option-price">+30</span>
+                            </label>
+                        </div>
+                </div>
+    <div class="option-group">
+        <h3>Appointment time</h3>
+        <div class="datetime-row">
+            <div>
+                <label for="appt-date">Date</label>
+                <input type="date" id="appt-date" name="date" required>
+            </div>
+            <div>
+                <label for="appt-time">Time</label>
+                <select id="appt-time" name="time" required>
+                    <option value="">Select a time</option>
+                    <option value="09:00">9:00 am</option>
+                    <option value="10:00">10:00 am</option>
+                    <option value="11:00">11:00 am</option>
+                    <option value="12:00">12:00 pm</option>
+                    <option value="01:00">1:00 pm</option>
+                    <option value="02:00">2:00 pm</option>
+                    <option value="03:00">3:00 pm</option>
+                    <option value="04:00">4:00 pm</option>
+                    <option value="05:00">5:00 pm</option>
+                    <option value="06:00">6:00 pm</option>
+                </select>
+            </div>
+        </div>
+    </div>       
+    <div class="option-group">
+        <h3>Details</h3>
+        <div class="datetime-row single-column">
+            <div>
+                <label for="appt-email">Email</label>
+                <input type="email" id="appt-email" name="email" required>
+            </div>
+        </div>
+    </div>     
+    <input type="hidden" name="summary" id="hidden-summary">
+    <input type="hidden" name="total" id="hidden-total">
+
+    <div id="booking-summary">
+        <p>Selected: <span id="summary-text">None</span></p>
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total-text">$0</span>
+            </div>
+    </div>
+    <button type="submit" class="cta-button" id="submit-booking">Request booking</button>
+        <div id="booking-confirmation">
+            Booking request sent. We will be in touch to confirm.
+        </div>
+            </form>
+
+    </section>                
+                </main>
+                <footer id="contact">
+                    <h2>Looking to create a singular experiance. </h2>
+                        <p>Please don't hesitate to contact us and let us create a treatment plan</p>
+                        <a href="tel:+13463292127">Phone</a>
+                        <a href="mailto:mtsusyap@gmail.com">Email</a>
+                </footer>
+        </body>
+</html>
