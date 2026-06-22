@@ -40,7 +40,10 @@ optionInputs.forEach(input => input.addEventListener('change', updateSummary));
 dateInput.addEventListener('change', updateSummary);
 timeInput.addEventListener('change', updateSummary);
 
-bookingForm.addEventListener('submit', (event) => {
+// Paste the Access Key you got from https://web3forms.com here.
+const WEB3FORMS_ACCESS_KEY = '315c7ca1-36a8-438e-b4fc-eb5922f1499a';
+
+bookingForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     let serviceSelected = false;
@@ -55,6 +58,48 @@ bookingForm.addEventListener('submit', (event) => {
     }
 
     updateSummary();
-    confirmation.style.display = 'block';
+
+    const emailInput = document.getElementById('appt-email');
+    const customerEmail = emailInput.value.trim();
+
+    const payload = {
+        access_key: 315c7ca1-36a8-438e-b4fc-eb5922f1499a ,
+        subject: 'Booking Request: ' + (hiddenSummary.value || 'New booking'),
+        from_name: customerEmail || 'Website booking form',
+        selected_services: hiddenSummary.value || 'None',
+        total: '$' + hiddenTotal.value,
+        customer_email: customerEmail,
+        appointment_date: dateInput.value,
+        appointment_time: timeInput.value
+    };
+
     submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+
+        if(result.success){
+            confirmation.textContent = 'Booking request sent. We will be in touch to confirm.';
+            confirmation.style.display = 'block';
+        } else {
+            // Web3Forms reached the server fine, but rejected the request
+            // (e.g. bad access key) — re-enable so the visitor can retry.
+            confirmation.textContent = 'Something went wrong sending your request. Please try again or call us directly.';
+            confirmation.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Request booking';
+        }
+    } catch (error) {
+        // Network failure — visitor is offline or Web3Forms is unreachable.
+        confirmation.textContent = 'Could not connect. Please check your internet connection and try again.';
+        confirmation.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request booking';
+    }
 });
