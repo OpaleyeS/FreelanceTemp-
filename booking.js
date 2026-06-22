@@ -63,7 +63,7 @@ bookingForm.addEventListener('submit', async (event) => {
     const customerEmail = emailInput.value.trim();
 
     const payload = {
-        access_key: 315c7ca1-36a8-438e-b4fc-eb5922f1499a ,
+        access_key: '315c7ca1-36a8-438e-b4fc-eb5922f1499a' ,
         subject: 'Booking Request: ' + (hiddenSummary.value || 'New booking'),
         from_name: customerEmail || 'Website booking form',
         selected_services: hiddenSummary.value || 'None',
