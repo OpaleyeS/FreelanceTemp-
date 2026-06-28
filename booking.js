@@ -1,14 +1,3 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV37KXNYLM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RV37KXNYLM');
-</script>
-
-
 
 const bookingForm = document.getElementById('booking-form');
 const optionInputs = bookingForm.querySelectorAll('.option input');
